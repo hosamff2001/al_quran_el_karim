@@ -28,14 +28,18 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  arabic_numbers: ^1.0.0
   cupertino_icons: ^1.0.2
+  device_preview: ^1.1.0
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.3
   flutter_localization: ^0.1.14
   go_router: ^12.1.1
   google_fonts: ^6.1.0
   lottie: ^2.7.0
-  shared_preferences:
+  scrollable_positioned_list: ^0.3.8
+  shared_preferences: null
 
 dev_dependencies:
   flutter_launcher_icons: "^0.13.1"
@@ -76,13 +80,13 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
+  fonts:
+    - family: quran
+      fonts:
+        - asset: asset/fonts/HafsSmart_08.ttf
+    - family: me_quran
+      fonts:
+        - asset: asset/fonts/me_quran.ttf
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf

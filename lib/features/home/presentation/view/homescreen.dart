@@ -1,3 +1,4 @@
+import 'package:al_quran_el_karim/core/custom/arabicsuranumber.dart';
 import 'package:al_quran_el_karim/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +9,6 @@ class HomeScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text(S.of(context).appbartitle),
         ),
-        body: null);
+        body: ArabicSuraNumber(number: 2));
   }
 }

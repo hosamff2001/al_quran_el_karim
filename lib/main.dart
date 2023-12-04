@@ -1,5 +1,6 @@
 import 'package:al_quran_el_karim/core/resources/language_manager.dart';
 import 'package:al_quran_el_karim/core/utliz/cashmemory.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
 import 'core/resources/theme_manager.dart';
@@ -10,7 +11,12 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   CashHelper.init();
-  runApp(const MyApp());
+  runApp(
+    DevicePreview(
+      enabled: true,
+      builder: (context) => MyApp(), // Wrap your app
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

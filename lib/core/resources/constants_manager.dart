@@ -1,4 +1,5 @@
 import 'package:al_quran_el_karim/core/utliz/cashmemory.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class AppConstants {
   static const int splashDelay = 4;
@@ -7,8 +8,8 @@ class AppConstants {
   static int bookmarkedSura = 1;
   static bool fabIsClicked = true;
 
-// static final ItemScrollController itemScrollController = ItemScrollController();
-// static final ItemPositionsListener itemPositionsListener =ItemPositionsListener.create();
+static final ItemScrollController itemScrollController = ItemScrollController();
+static final ItemPositionsListener itemPositionsListener =ItemPositionsListener.create();
 
   static String arabicFont = 'quran';
   static double arabicFontSize = 28;
