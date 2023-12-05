@@ -10,7 +10,7 @@ Row verseBuilder(int index, previousVerses,arabic) {
             children: [
               Text(
                 arabic[index + previousVerses]['aya_text'],
-                textDirection: TextDirection.rtl,
+              
                 style: TextStyle(
                   fontSize: AppConstants.arabicFontSize,
                   fontFamily: AppConstants.arabicFont,

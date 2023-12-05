@@ -3,19 +3,26 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 import '../../../../../core/custom/versebuilder.dart';
 import '../../../../../core/resources/constants_manager.dart';
-import 'surahbuilder.dart';
+import 'basmala.dart';
 
 class SingleSuraBuilderWidget extends StatelessWidget {
-  const SingleSuraBuilderWidget({super.key, required this.view, required this.sura, required this.previousVerses, this.arabic, this.LenghtOfSura, required this.fullSura});
-  final bool view ;
-  final int sura ;
-  final int previousVerses ;
-  final dynamic arabic ;
-  final dynamic LenghtOfSura ;
-  final String fullSura ;
+  const SingleSuraBuilderWidget(
+      {super.key,
+      required this.view,
+      required this.sura,
+      required this.previousVerses,
+      this.arabic,
+      this.lenghtOfSura,
+      required this.fullSura});
+  final bool view;
+  final int sura;
+  final int previousVerses;
+  final dynamic arabic;
+  final dynamic lenghtOfSura;
+  final String fullSura;
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return SafeArea(
       child: Container(
         color: const Color.fromARGB(255, 253, 251, 240),
         child: view
@@ -26,6 +33,9 @@ class SingleSuraBuilderWidget extends StatelessWidget {
                       (index != 0) || (sura == 0) || (sura == 8)
                           ? const Text('')
                           : const RetunBasmala(),
+                      SizedBox(
+                        height: 22,
+                      ),
                       Container(
                         color: index % 2 != 0
                             ? const Color.fromARGB(255, 253, 251, 240)
@@ -80,7 +90,7 @@ class SingleSuraBuilderWidget extends StatelessWidget {
                 },
                 itemScrollController: AppConstants.itemScrollController,
                 itemPositionsListener: AppConstants.itemPositionsListener,
-                itemCount: LenghtOfSura,
+                itemCount: lenghtOfSura,
               )
             : ListView(
                 children: [
@@ -97,7 +107,7 @@ class SingleSuraBuilderWidget extends StatelessWidget {
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 fullSura, //mushaf mode
-                                textDirection: TextDirection.rtl,
+
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontSize: AppConstants.mushafFontSize,
@@ -115,6 +125,5 @@ class SingleSuraBuilderWidget extends StatelessWidget {
               ),
       ),
     );
- 
   }
 }

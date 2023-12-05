@@ -50,11 +50,91 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `AL Quran`
+  String get ALQuran {
+    return Intl.message(
+      'AL Quran',
+      name: 'ALQuran',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `The Holy Quran`
   String get appbartitle {
     return Intl.message(
       'The Holy Quran',
       name: 'appbartitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Setting`
+  String get setting {
+    return Intl.message(
+      'Setting',
+      name: 'setting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Font Size :`
+  String get Font_Size {
+    return Intl.message(
+      'Font Size :',
+      name: 'Font_Size',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Moshaf Size`
+  String get Moshaf_Size {
+    return Intl.message(
+      'Moshaf Size',
+      name: 'Moshaf_Size',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset`
+  String get Reset {
+    return Intl.message(
+      'Reset',
+      name: 'Reset',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get Save {
+    return Intl.message(
+      'Save',
+      name: 'Save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Share`
+  String get Share {
+    return Intl.message(
+      'Share',
+      name: 'Share',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rate`
+  String get Rate {
+    return Intl.message(
+      'Rate',
+      name: 'Rate',
       desc: '',
       args: [],
     );

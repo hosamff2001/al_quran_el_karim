@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:al_quran_el_karim/core/utliz/cashmemory.dart';
+import 'package:flutter/services.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class AppConstants {
@@ -8,8 +11,10 @@ class AppConstants {
   static int bookmarkedSura = 1;
   static bool fabIsClicked = true;
 
-static final ItemScrollController itemScrollController = ItemScrollController();
-static final ItemPositionsListener itemPositionsListener =ItemPositionsListener.create();
+  static final ItemScrollController itemScrollController =
+      ItemScrollController();
+  static final ItemPositionsListener itemPositionsListener =
+      ItemPositionsListener.create();
 
   static String arabicFont = 'quran';
   static double arabicFontSize = 28;
@@ -23,7 +28,7 @@ static final ItemPositionsListener itemPositionsListener =ItemPositionsListener.
     CashHelper.setdata(key: 'mushafFontSize', value: mushafFontSize.toInt());
   }
 
-  static void getSettings() {
+  static Future getSettings() async {
     try {
       arabicFontSize = CashHelper.getdata(key: 'arabicFontSize')!.toDouble();
       mushafFontSize = CashHelper.getdata(key: 'mushafFontSize')!.toDouble();
@@ -42,8 +47,8 @@ static final ItemPositionsListener itemPositionsListener =ItemPositionsListener.
     print("read book mark called");
 
     try {
-      bookmarkedAyah = CashHelper.getdata(key: 'ayah')!;
-      bookmarkedSura = CashHelper.getdata(key: 'surah')!;
+      bookmarkedAyah = await CashHelper.getdata(key: 'ayah')!;
+      bookmarkedSura = await CashHelper.getdata(key: 'surah')!;
       return true;
     } catch (e) {
       return false;
@@ -288,11 +293,12 @@ static final ItemPositionsListener itemPositionsListener =ItemPositionsListener.
   static List malayalam = [];
   static List quran = [];
 
-// Future readJson ()async{
-//   final String response =await rootBundle.loadString("assets/hafs_smart_v8.json");
-//   final data=json.decode(response);
-//   arabic=data["quran"];
-//   malayalam=data["malayalam"];
-//   return quran=[arabic,malayalam];
-// }
+  static Future readJson() async {
+    final String response =
+        await rootBundle.loadString("asset/animation/hafs_smart_v8.json");
+    final data = json.decode(response);
+    arabic = data["quran"];
+    malayalam = data["malayalam"];
+    return quran = [arabic, malayalam];
+  }
 }

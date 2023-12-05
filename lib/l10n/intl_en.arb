@@ -1,3 +1,11 @@
 {
-    "appbartitle": "The Holy Quran"
+    "ALQuran":"AL Quran",
+    "appbartitle": "The Holy Quran",
+    "setting":"Setting",
+    "Font_Size":"Font Size :",
+    "Moshaf_Size":"Moshaf Size",
+    "Reset":"Reset",
+    "Save":"Save",
+    "Share":"Share",
+    "Rate":"Rate"
 }

@@ -7,7 +7,7 @@ class ArabicSuraNumber extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      "\uFD3F" + ArabicNumbers().convert(number).toString() + "\uFD3E",
+      "\uFD3F" + ArabicNumbers().convert(number+1).toString() + "\uFD3E",
       style: const TextStyle(
         fontFamily: "me_quran",
         fontSize: 20,

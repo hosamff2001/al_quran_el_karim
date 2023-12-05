@@ -18,6 +18,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      await AppConstants.readJson();
+      await AppConstants.getSettings();
+    });
     Timer(const Duration(seconds: AppConstants.splashDelay), () {
       GoRouter.of(context).pushReplacement(MyRoute.kHomeView);
     });
