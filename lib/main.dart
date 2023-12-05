@@ -1,7 +1,6 @@
 import 'package:al_quran_el_karim/core/resources/language_manager.dart';
 import 'package:al_quran_el_karim/core/utliz/cashmemory.dart';
 import 'package:al_quran_el_karim/features/home/presentation/mangment/app_cubit.dart';
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
